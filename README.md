@@ -1,6 +1,6 @@
 # Tzara---A-Personal-Assistant
 
-A Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
+A highly customisable Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
 
 ####Tasks:
 
@@ -94,7 +94,7 @@ sudo apt-get install guake
 
 ## Installation
 
-####1) Paths setup:
+####1) Path setup:
 
 After having downloaded all files, open EACH ONE and modify according to the instructions provided in the file. 
 
@@ -111,7 +111,7 @@ f_reminder = open("/media/suman/New Volume1/Artificial Intelligence/Personal Ass
 
 This will ensure the Personal Assistant is customised only to you.
 
-####2) Emails:
+####2) Email:
 
 This is particular for Gmail accounts. 
 
@@ -171,7 +171,9 @@ Tzara will greet you with something like: "Hi, my name is Tzara. How may I help 
 
 Go on and chat with your newfound friend.
 
-3) To end chat, type anything like:
+3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: "Hey Tzara, could you please search for cat." or "Hi, could you please google cat." or simply "google cat".
+
+4) To end chat, type anything like:
 ```
 Bye Tzara
 ```
@@ -180,7 +182,11 @@ or
 ```
 Cya Tzara
 ```
-4) 
+or simply
+```
+bye
+```
+
 ## Authors
 
 Suman Pal
