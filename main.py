@@ -17,9 +17,7 @@ def check_last_update():
     Checks when the system was last updated.
     If the system was not updated for the last 2 days, updates system.
     """
-    f_update = open("/media/suman/New Volume1/Artificial Intelligence" \
-        "/Personal Assistant/Personal Assistant/Text_files" \
-        "/prev_update.txt", 'r+')
+    f_update = open("/path/to/file/prev_update.txt", 'r+')  #modify
     prev_date = f_update.read().strip().split("/")
     current_date = time.strftime("%d/%m/%Y")
     date = current_date.strip().split("/")
@@ -30,7 +28,7 @@ def check_last_update():
             speak("Hey, I just realised that it's been a while that " \
                 "your system has been updated.")
             speak("Would you like to update system now?")
-            reply = raw_input('\033[1m'+'Suman: '+'\033[0m')
+            reply = raw_input('\033[1m'+'Username: '+'\033[0m') #modify
             if confirm(reply) == 1:
                 speak("Please input password to update system.")
                 os.system("sudo apt-get update && apt-get upgrade")
@@ -52,8 +50,7 @@ def check_reminder():
     c_month = current_date[5:7]
     c_date = current_date[8:10]
     to_del = ''
-    f_reminder = open("/media/suman/New Volume1/Artificial Intelligence" \
-        "/Personal Assistant/Personal Assistant/Text_files/reminder.txt", "r+")
+    f_reminder = open("/path/to/the/file/reminder.txt", "r+")   #modify
     for line in f_reminder:
         r_date = line[0:2]
         if r_date == c_date:
@@ -64,7 +61,7 @@ def check_reminder():
                     speak("You have a reminder set for today." \
                         "This is what it says: \n" + line[11:])
                     speak("Would you like me to delete the reminder now?")
-                    reply = raw_input('\033[1m'+'Suman: '+'\033[0m')
+                    reply = raw_input('\033[1m'+'Username '+'\033[0m')  #modify
                     if confirm(reply) == 1:
                         to_del = line
                         #TO FINISH
@@ -79,8 +76,7 @@ def main():
     If input is "bye" (or similar), quits.
     Else passes the user input to the function tzara() stored in tzara.py
     """
-    f_greetings = open("/media/suman/New Volume1/Artificial Intelligence" \
-        "/Personal Assistant/Personal Assistant/Text_files/greetings.txt", "r")
+    f_greetings = open("/path/to/the/file/greetings.txt", "r")  #modify
     greetings_list = f_greetings.read().strip().split("\n")
     f_greetings.close()
     random_greeting = random.randrange(0, len(greetings_list))
@@ -89,8 +85,7 @@ def main():
     check_last_update()
     check_reminder()
 
-    f_bye = open("/media/suman/New Volume1/Artificial Intelligence" \
-        "/Personal Assistant/Personal Assistant/Text_files/bye.txt", "r")
+    f_bye = open("/path/to/the/file/bye.txt", "r")  #modify
     bye_list = f_bye.read().strip().split("\n")
     f_bye.close()
     bye_list2 = [''.join(bye_list[i])+" tzara" for i in range(0, len(bye_list))]
