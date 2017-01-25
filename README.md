@@ -24,7 +24,7 @@ A Personal Assistant name Tzara which helps in daily tasks written in Python 2.7
 
 10. Converse - basic
 
-11. Tell the time and date
+11. Tell date and time
 
 12. Shutdown the system
 
