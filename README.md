@@ -92,6 +92,11 @@ sudo apt-get install wmctrl
 sudo apt-get install guake
 ```
 
+11) xdg-utils
+```bash
+sudo apt-get install xdg-utils
+```
+
 ## Installation
 
 ####1) Path setup:
