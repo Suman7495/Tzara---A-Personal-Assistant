@@ -2,7 +2,7 @@
 Gets confirmation.
 
 Modify: 
-13: f_ok = open("path/to/file/confirmations.txt", "r")    #Modify
+13: f_ok = open("path/to/file/confirmations.txt", "r")    
 """
 def confirm(reply):
     """
@@ -10,7 +10,7 @@ def confirm(reply):
     If yes, success.
     Else, failure.
     """
-    f_ok = open("path/to/file/confirmations.txt", "r")
+    f_ok = open("path/to/file/confirmations.txt", "r")    #modify
     confirmation_list = f_ok.read().strip().split()
     f_ok.close()
     return reply.lower() in confirmation_list
