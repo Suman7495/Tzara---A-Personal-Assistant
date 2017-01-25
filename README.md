@@ -45,50 +45,50 @@ Environment Setup.
 1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
 2) Pip
-```
+```bash
 sudo apt-get update
 sudo apt-get install python-pip
 ``` 
 You could also install Pip following [these instructions.](https://pip.pypa.io/en/stable/installing/)
 
 3) gTTS
-```
+```bash
 sudo pip install gTTS
 ```
 
 4) mpg123
-```
+```bash
 sudo apt-get install mpg123
 ```
 
 5) NLTK package
-```
+```bash
 sudo pip install -U nltk
 ```
 Or follow [these instructions.](http://www.nltk.org/install.html)
 
 6) Firefox
-```
+```bash
 sudo apt-get install firefox
 ```
 
 7) Audacious music Player
-```
+```bash
 sudo apt-get install audacious
 ```
 
 8) xdotool
-```
+```bash
 sudo apt-get install xdotool
 ```
 
 9) wmctrl
-```
+```bash
 sudo apt-get install wmctrl
 ```
 
 10) Guake dropdown terminal
-```
+```bash
 sudo apt-get install guake
 ```
 
@@ -99,13 +99,13 @@ sudo apt-get install guake
 After having downloaded all files, open EACH ONE and modify according to the instructions provided in the file. 
 
 For example, you may find:
-```
+```python
 f_reminder = open("/path/to/the/file/reminder.txt", "r+")
 ```
 Replace "/path/to/the/file" with the actual pathname to the file called "reminder.txt". 
 
 Thus, in my system, this particular pathname was:
-```
+```python
 f_reminder = open("/media/suman/New Volume1/Artificial Intelligence/Personal Assistant/Text_files/reminder.txt", "r+")
 ```
 
@@ -122,7 +122,7 @@ To obtain a password for Tzara, follow [these instructions.](https://support.goo
 Then, open a plain text document in the Home Directory.
 
 Copy paste the following code. 
-```
+```bash
 #!/bin/bash
 
 username=your_email_here"
@@ -143,7 +143,7 @@ Rename the document to: "check_email.sh"
 
 You can modify the following .txt files to personalise Tzara further:
 
-a) bye.txt - Add ways for Tzara to say goodbye.
+a) bye.txt - Add ways to say goodbye.
 
 b) comn_sites.txt - List of the sites you visit.
 
@@ -162,7 +162,7 @@ g) greetings.txt - Ways Tzara will greet you.
 1) Open the guake terminal.
 
 2) Input the following code:
-```
+```bash
 python /path/to/the/file/main.py
 ```
 Replace "/path/to/the/file" to the pathname to the file called "main.py". This file initialises Tzara.
