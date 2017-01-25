@@ -1,9 +1,6 @@
 """
 Creates database to generate sentences.
 
-Modify:
-8: f_corpora = open("/path/to/the/file/corpora.txt","r")
-12: f = open("/path/to/the/file/nltk_data/corpora/gutenberg/" + name.strip())
 """
 def database():
 	f_corpora = open("/path/to/the/file/corpora.txt","r")     #modify
