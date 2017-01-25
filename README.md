@@ -6,7 +6,7 @@ Tasks:
 
 1. Send emails
 
-2. Browse
+2. Search the internet 
 
 3. Open and close websites
 
@@ -42,7 +42,7 @@ An Internet connection is recommended.
 
 Setting up the environment.
 
-1) Python2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
+1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
 2) Pip
 ```
@@ -141,17 +141,25 @@ Rename the document to: "check_email.sh"
 
 3) Setting up .txt files:
 
-You can modify the following .txt files:
+You can modify the following .txt files to personalise Tzara further:
 
-a) bye.txt - Add ways for Tzara to say Goodbye.
+a) bye.txt - Add ways for Tzara to say goodbye.
 
-b) comn_sites.txt - Common sites you visit
+b) comn_sites.txt - List of the sites you visit.
 
-c) confirmations.txt - 
+c) confirmations.txt - Add ways for to confirm.
+
+d) corporat.txt - List of corpora from where Tzara develops her sentences. Currently from Brown Corpus
+
+e) email_id.txt - List of email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
+
+f) folder.txt - List of folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Simply add "Documents - /home/username/Documents" to folder.txt, and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
+
+g) greetings.txt - Ways Tzara will greet you.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+
 
 ### Break down into end to end tests
 
