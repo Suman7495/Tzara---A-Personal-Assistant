@@ -12,7 +12,7 @@ Creates database.
 Collects data from Brown Corpus in the NLTK package.
 """
 data = database()
-f = open("/path/to/file/data.txt", "w")
+f = open("/path/to/file/data.txt", "w")    #modify
 for word in data:
     f.write(word + " ")
 f.close()
