@@ -1,0 +1,16 @@
+Blender-/media/suman/New\ Volume1/Animation\ Blender
+AI-/media/suman/New\ Volume1/Artificial\ Intelligence
+Tzara-/media/suman/New\ Volume1/Artificial\ Intelligence/Personal\ Assistant/Personal\ Assistant
+Books-/media/suman/New\ Volume1/Books
+Documents-/media/suman/New\ Volume1/Documents
+House-/media/suman/New\ Volume1/House
+Maths-/media/suman/New\ Volume1/Mathematics
+Movies-/media/suman/New\ Volume1/Movies
+Pics-/media/suman/New\ Volume1/Pics
+Songs-/media/suman/New\ Volume1/songs
+Research-/media/suman/New\ Volume1/Mathematics/RESEARCH/Important/Revised
+Downloads-/home/suman/Downloads
+K Prog-/media/suman/New\ Volume1/Documents/Knowledge\ 3/K\ Programme\ 2016
+Nandini-/media/suman/New\ Volume1/Documents/Knowledge\ 3
+Blog-/media/suman/New Volume1/Artificial Intelligence/Blog
+Edx-/media/suman/New Volume1/Artificial Intelligence/Edx
