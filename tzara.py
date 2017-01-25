@@ -92,9 +92,7 @@ def tzara(string):
             reminder.reminder()
 
         elif len(filtered_sentence) > 1:
-            f_sites = open("/media/suman/New Volume1/Artificial Intelligence" \
-                "/Personal Assistant/Personal Assistant"
-                "/Text_files/comn_sites.txt", "r")
+            f_sites = open("/path/to/the/file/comn_sites.txt", "r")     #modify
             for line in f_sites:
                 name_list = line.strip().split("-")
                 #if (n.lower()==''.join(name_list[0:1]).lower()):
@@ -113,7 +111,7 @@ def tzara(string):
 
     elif 'terminal' in filtered_sentence:
         speak("Would you like me to open the terminal for you?")
-        reply = raw_input('\033[1m'+'Suman: '+'\033[0m')
+        reply = raw_input('\033[1m'+'Username: '+'\033[0m') #modify
         if confirm(reply) == 1:
             terminal.terminal()
         else:
@@ -160,7 +158,7 @@ def tzara(string):
 
         #speak("Would you like me to search for the word"
             #""+search_string+" on Google?")
-        reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')     #modify
         if confirm(reply) == 1:
             firefox.fn_search(search_string)
         #else:
@@ -204,7 +202,7 @@ def tzara(string):
             firefox.fn_write_mail(filtered_sentence[pos])
         elif filtered_sentence[-1] == 'mail':
             speak("Whom would you like to mail?")
-            reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+            reply = raw_input('\033[1m' + 'Username: ' + '\033[0m') #modify
             firefox.fn_write_mail(reply)
         else:
             speak("Do you want to mail somebody?"
@@ -214,7 +212,7 @@ def tzara(string):
 
     elif 'shutdown' in filtered_sentence:
         speak("Would you like me to shutdown the system?")
-        reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')     #modify
         if confirm(reply) == 1:
             speak("Shutting down system now. Goodbye!")
             os.system("sudo shutdown -h now")
