@@ -8,7 +8,7 @@ def fn_open_pdf(name):
     """
     Opens the pdf using evince.
     """
-    os.system('find /media/suman/New\ Volume1 -iname "*' + name +
+    os.system('find -iname "*' + name +
 		'*.pdf" -exec evince {} + &disown\;')
     speak("There you go! Enjoy reading!")
 
