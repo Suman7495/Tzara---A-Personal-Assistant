@@ -19,29 +19,19 @@ def ping():
     If success, saves "success" in the file mentioned below.
     Else, saves "failure".
     """
-    #speak("Checking if you are connected to the Internet...")
+
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
-        'then echo fail >/path/to/the/file/ping_result.txt;'
-        'else echo success>/path/to/the/file/ping_result.txt;fi;clear')
+        'then echo fail >/path/to/the/file/ping_result.txt;'    #modify
+        'else echo success>/path/to/the/file/ping_result.txt;fi;clear')    #modify
     os.system("guake -s 1")
     os.system("guake -s 2 -e exit")
-    #os.system("if ! ping -c 1 www.google.com &>/dev/null;"
-        #"hen echo fail >/media/suman/New\ Volume1/Artificial"
-        #"\ Intelligence/Personal\ Assistant/Personal\ Assistant"
-        #"/Text_files/ping_result.txt; else echo success>"
-        #"/media/suman/New\ Volume1/Artificial\ Intelligence"
-        #"/Personal\ Assistant/Personal\ Assistant/Text_files"
-        #"/ping_result.txt;fi;clear")
-    f_ping = open("/media/suman/New Volume1/Artificial Intelligence"
-        "/Personal Assistant/Personal Assistant/Text_files"
-        "/ping_result.txt")
+
+    f_ping = open("/path/to/the/file/ping_result.txt")    #modify
     result = f_ping.read().strip().split("\n")
     result = ''.join(result)
     f_ping.close()
-    #raw_input()
     if result == 'success':
-        #speak("Great! You have an Internet connection.")
         return 1
     else:
         speak("Sorry. Internet is down currently.")
@@ -56,7 +46,7 @@ def fn_search(word):
     if ping() == 0:
         return
     speak('Would you like me to search for the word ' + word + '?')
-    reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')    #modify
     if confirm(reply) == 1:
         search_link = "www.google.co.in/#q=" + word
         speak('Cool. Here are the results.')
@@ -74,7 +64,7 @@ def fn_close_tab():
     Closes a firefox tab.
     """
     speak('Do you want me to close the current tab?')
-    reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify
     if confirm(reply) == 1:
         os.system('wmctrl -a firefox; xdotool key Ctrl+w;')
     else:
@@ -117,8 +107,7 @@ def fn_write_mail(name):
         speak("Sorry. The Internet is down currently.")
         return
     counter = 0
-    f_email = open("/media/suman/New Volume1/Artificial Intelligence"
-        "/Personal Assistant/Personal Assistant/Text_files/email_id.txt", "r")
+    f_email = open("/path/to/the/email_id.txt", "r")	#modify
     for line in f_email:
         print line
         name_list = line.strip().split("-")
@@ -134,10 +123,10 @@ def fn_write_mail(name):
         speak("Sorry. The name doesn't exist in the directory."
             "You'll have to give me the person's email address"
             " for me to mail him. Would you like to do that?")
-        reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')		#modify
         if confirm(reply) == 1:
             speak("Ok. Now please enter a valid email address.")
-            email_id = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+            email_id = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify
             speak("Now write the mail. "
             "Press Control+D when you are done.")
             os.system('mail ' + email_id)
@@ -153,9 +142,8 @@ def fn_read_mail():
     if ping() == 0:
         speak("Sorry. The Internet is down currently.")
         return
-    os.system("/home/suman/tzara/check_email.sh")
-    f_inbx = open("/media/suman/New Volume1/Artificial Intelligence"
-		"/Personal Assistant/Personal Assistant/Text_files/inbox_details.txt")
+    os.system("/path/to/the/file/check_email.sh")
+    f_inbx = open("/path/to/the/file/inbox_details.txt")	#modify
     data = f_inbx.read()
     f_inbx.close()
     unread_mails = int(data[(data.index("<fullcount>") + 11)\
