@@ -8,7 +8,7 @@ def fn_play_song(name):
     """
     Plays the given song with Audacious
     """
-    os.system('find /media/suman/New\ Volume1/songs -iname "*'+name+'*"'
+    os.system('find -iname "*'+name+'*"'
         '-exec audacious {} + &disown\;')
 
 def fn_close_song():
