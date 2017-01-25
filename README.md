@@ -159,9 +159,9 @@ g) greetings.txt - Ways Tzara will greet you.
 
 ## Deployment
 
-1. Open the guake terminal.
+1) Open the guake terminal.
 
-2. Input the following code:
+2) Input the following code:
 ```
 python /path/to/the/file/main.py
 ```
@@ -171,6 +171,11 @@ Tzara will greet you with something like: "Hi, my name is Tzara. How may I help 
 
 Go on and chat with your newfound friend.
 
+3) To end chat, anything like:
+```
+Bye Tzara
+```
+4) 
 ## Authors
 
 Suman Pal
