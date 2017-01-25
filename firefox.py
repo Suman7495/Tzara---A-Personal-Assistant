@@ -22,12 +22,8 @@ def ping():
     #speak("Checking if you are connected to the Internet...")
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
-        'then echo fail >/media/suman/New\ Volume1'
-        '/Artificial\ Intelligence/Personal\ Assistant/Personal'
-        '\ Assistant/Text_files/ping_result.txt;'
-        'else echo success>/media/suman/New\ Volume1/Artificial'
-        '\ Intelligence/Personal\ Assistant/Personal'
-        '\ Assistant/Text_files/ping_result.txt;fi;clear"')
+        'then echo fail >/path/to/the/file/ping_result.txt;'
+        'else echo success>/path/to/the/file/ping_result.txt;fi;clear')
     os.system("guake -s 1")
     os.system("guake -s 2 -e exit")
     #os.system("if ! ping -c 1 www.google.com &>/dev/null;"
