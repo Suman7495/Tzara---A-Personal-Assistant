@@ -1,8 +1,6 @@
 """
 Gets confirmation.
 
-Modify: 
-13: f_ok = open("path/to/file/confirmations.txt", "r")    
 """
 def confirm(reply):
     """
