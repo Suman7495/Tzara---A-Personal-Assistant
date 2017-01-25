@@ -19,7 +19,6 @@ def ping():
     If success, saves "success" in the file mentioned below.
     Else, saves "failure".
     """
-
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
         'then echo fail >/path/to/the/file/ping_result.txt;'    #modify
@@ -46,7 +45,7 @@ def fn_search(word):
     if ping() == 0:
         return
     speak('Would you like me to search for the word ' + word + '?')
-    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')    #modify
+    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')    #modify: Change "Username"
     if confirm(reply) == 1:
         search_link = "www.google.co.in/#q=" + word
         speak('Cool. Here are the results.')
@@ -64,7 +63,7 @@ def fn_close_tab():
     Closes a firefox tab.
     """
     speak('Do you want me to close the current tab?')
-    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify
+    reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify: Change "Username"
     if confirm(reply) == 1:
         os.system('wmctrl -a firefox; xdotool key Ctrl+w;')
     else:
@@ -123,10 +122,10 @@ def fn_write_mail(name):
         speak("Sorry. The name doesn't exist in the directory."
             "You'll have to give me the person's email address"
             " for me to mail him. Would you like to do that?")
-        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')		#modify
+        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')		#modify: Change "Username"
         if confirm(reply) == 1:
             speak("Ok. Now please enter a valid email address.")
-            email_id = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify
+            email_id = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify: Change "Username"
             speak("Now write the mail. "
             "Press Control+D when you are done.")
             os.system('mail ' + email_id)
@@ -143,7 +142,7 @@ def fn_read_mail():
         speak("Sorry. The Internet is down currently.")
         return
     os.system("/path/to/the/file/check_email.sh")
-    f_inbx = open("/path/to/the/file/inbox_details.txt")	#modify
+    f_inbx = open("/path/to/the/file/inbox_details.txt")	#modify: Change "Username"
     data = f_inbx.read()
     f_inbx.close()
     unread_mails = int(data[(data.index("<fullcount>") + 11)\
