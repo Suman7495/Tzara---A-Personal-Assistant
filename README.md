@@ -65,7 +65,7 @@ sudo apt-get install mpg123
 ```
 sudo pip install -U nltk
 ```
-Or follow [these instructions.](http://www.nltk.org/install.html). 
+Or follow [these instructions.](http://www.nltk.org/install.html)
 
 6) Firefox
 ```
@@ -153,61 +153,29 @@ d) corporat.txt - List of corpora from where Tzara develops her sentences. Curre
 
 e) email_id.txt - List of email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
 
-f) folder.txt - List of folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Simply add "Documents - /home/username/Documents" to folder.txt, and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
+f) folder.txt - List of folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Add "Documents - /home/username/Documents" to "folder.txt", and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
 
 g) greetings.txt - Ways Tzara will greet you.
 
-## Running the tests
-
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+1. Open the guake terminal.
 
-## Built With
+2. Input the following code:
+```
+python /path/to/the/file/main.py
+```
+Replace "/path/to/the/file" to the pathname to the file called "main.py". This file initialises Tzara.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Tzara will greet you with something like: "Hi, my name is Tzara. How may I help you?"
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Go on and chat with your newfound friend.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Suman Pal
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
