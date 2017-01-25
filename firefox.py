@@ -1,0 +1,168 @@
+"""
+Several modules using firefox browser.
+
+Tasks:
+(1) Checks for an Internet connection.
+(2) Searches (Google) for a word.
+(3) Send emails.
+(4) Reads unread mails.
+(5) Opens any website.
+(6) Closes a tab.
+"""
+from Speech import speak
+from confirm import confirm
+import os
+
+def ping():
+    """
+    Checks for an Internet connection.
+    If success, saves "success" in the file mentioned below.
+    Else, saves "failure".
+    """
+    #speak("Checking if you are connected to the Internet...")
+    os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
+        'www.google.com &>/dev/null;'
+        'then echo fail >/media/suman/New\ Volume1'
+        '/Artificial\ Intelligence/Personal\ Assistant/Personal'
+        '\ Assistant/Text_files/ping_result.txt;'
+        'else echo success>/media/suman/New\ Volume1/Artificial'
+        '\ Intelligence/Personal\ Assistant/Personal'
+        '\ Assistant/Text_files/ping_result.txt;fi;clear"')
+    os.system("guake -s 1")
+    os.system("guake -s 2 -e exit")
+    #os.system("if ! ping -c 1 www.google.com &>/dev/null;"
+        #"hen echo fail >/media/suman/New\ Volume1/Artificial"
+        #"\ Intelligence/Personal\ Assistant/Personal\ Assistant"
+        #"/Text_files/ping_result.txt; else echo success>"
+        #"/media/suman/New\ Volume1/Artificial\ Intelligence"
+        #"/Personal\ Assistant/Personal\ Assistant/Text_files"
+        #"/ping_result.txt;fi;clear")
+    f_ping = open("/media/suman/New Volume1/Artificial Intelligence"
+        "/Personal Assistant/Personal Assistant/Text_files"
+        "/ping_result.txt")
+    result = f_ping.read().strip().split("\n")
+    result = ''.join(result)
+    f_ping.close()
+    #raw_input()
+    if result == 'success':
+        #speak("Great! You have an Internet connection.")
+        return 1
+    else:
+        speak("Sorry. Internet is down currently.")
+        return 0
+
+def fn_search(word):
+    """
+    Calls ping().
+    If success:
+        Searches for the given word.
+    """
+    if ping() == 0:
+        return
+    speak('Would you like me to search for the word ' + word + '?')
+    reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+    if confirm(reply) == 1:
+        search_link = "www.google.co.in/#q=" + word
+        speak('Cool. Here are the results.')
+        os.system('guake -n CUR_DIR -e "firefox "' + search_link +
+            '" & >/dev/null"')
+        os.system("guake -s 1")
+        os.system("guake -s 2 -e exit")
+        return
+    else:
+        speak("As you wish.")
+        return
+
+def fn_close_tab():
+    """
+    Closes a firefox tab.
+    """
+    speak('Do you want me to close the current tab?')
+    reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+    if confirm(reply) == 1:
+        os.system('wmctrl -a firefox; xdotool key Ctrl+w;')
+    else:
+        speak('Ok')
+        return
+
+def fn_open_site(site):
+    """
+    Opens a website on the firefox browswer.
+    """
+    if ping() == 0:
+        speak("Sorry. Internet is down currently.")
+        return
+    if site.endswith(".com") == True:
+        os.system('guake -n CUR_DIR -e "firefox "'+ site +
+            '" & >/dev/null"')
+        speak("Please give me a while to complete the task.")
+        os.system("guake -s 1")
+        os.system("guake -s 2 -e exit")
+        speak("Task successfully completed.")
+
+    else:
+        os.system('guake -n CUR_DIR -e "firefox "' + site +
+            '".com & >/dev/null"')
+        speak("Please give me a while.")
+        os.system("guake -s 1")
+        os.system("guake -s 2 -e exit")
+        speak("Task successfully completed.")
+
+
+def fn_write_mail(name):
+    """
+    If an Internet connection is there:
+        Checks if the given name exists in directory.
+        If it does, asks user to write the mail, then send.
+        Else, asks for a valid email-id. Then asks the user to write.
+    Else quits.
+    """
+    if ping() == 0:
+        speak("Sorry. The Internet is down currently.")
+        return
+    counter = 0
+    f_email = open("/media/suman/New Volume1/Artificial Intelligence"
+        "/Personal Assistant/Personal Assistant/Text_files/email_id.txt", "r")
+    for line in f_email:
+        print line
+        name_list = line.strip().split("-")
+        if name.lower() == ''.join(name_list[0:1]).lower():
+            counter = 1
+            email_id = ''.join(name_list[1:2])
+            speak("Now write the mail. Press Control+D when you are done.")
+            os.system('mail ' + email_id)
+            speak("The mail has been sent.")
+            break
+    f_email.close()
+    if counter == 0:
+        speak("Sorry. The name doesn't exist in the directory."
+            "You'll have to give me the person's email address"
+            " for me to mail him. Would you like to do that?")
+        reply = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+        if confirm(reply) == 1:
+            speak("Ok. Now please enter a valid email address.")
+            email_id = raw_input('\033[1m' + 'Suman: ' + '\033[0m')
+            speak("Now write the mail. "
+            "Press Control+D when you are done.")
+            os.system('mail ' + email_id)
+            speak("The mail has been sent.")
+
+        else:
+            speak("As you wish.")
+
+def fn_read_mail():
+    """
+    Checks how many unread mails are there in the inbox.
+    """
+    if ping() == 0:
+        speak("Sorry. The Internet is down currently.")
+        return
+    os.system("/home/suman/tzara/check_email.sh")
+    f_inbx = open("/media/suman/New Volume1/Artificial Intelligence"
+		"/Personal Assistant/Personal Assistant/Text_files/inbox_details.txt")
+    data = f_inbx.read()
+    f_inbx.close()
+    unread_mails = int(data[(data.index("<fullcount>") + 11)\
+		:data.index("</fullcount>")])
+    speak("You have " + str(unread_mails) + " unread mails.")
+
