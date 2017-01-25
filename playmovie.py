@@ -10,8 +10,8 @@ def fn_movie(name):
 
     If movie is found, plays with vlc.
     """
-    path_list = ["/home/suman/Downloads", "/media/suman"
-        "/New\ Volume1/Movies"]
+    path_list = ["/path1/", "/path2"
+        "/path3/"]
     for path in path_list:
         os.system('find '+ path + ' -iname "*' + name + '*"'
             ' -exec vlc --fullscreen {} + & >/dev/null;')
