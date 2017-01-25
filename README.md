@@ -32,15 +32,15 @@ Tasks:
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Requirements
+## Requirements
 
 Debian or Ubuntu based system.
 
 An Internet connection is recommended.
 
-### Prerequisites
+## Prerequisites
 
-Setting up the environment.
+Environment Setup.
 
 1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
@@ -92,9 +92,9 @@ sudo apt-get install wmctrl
 sudo apt-get install guake
 ```
 
-### Installing
+## Installation
 
-1) Setting up pathnames:
+####1) Paths setup:
 
 After having downloaded all files, open EACH ONE and modify according to the instructions provided in the file. 
 
@@ -111,7 +111,7 @@ f_reminder = open("/media/suman/New Volume1/Artificial Intelligence/Personal Ass
 
 This will ensure the Personal Assistant is customised only to you.
 
-2) Emails:
+####2) Emails:
 
 This is particular for Gmail accounts. 
 
@@ -139,7 +139,7 @@ Replace "/path/to/the/file/" with the pathname to the file "inbox_detail.txt"
 
 Rename the document to: "check_email.sh"
 
-3) Setting up .txt files:
+####3) Setting up .txt files:
 
 You can modify the following .txt files to personalise Tzara further:
 
@@ -171,9 +171,14 @@ Tzara will greet you with something like: "Hi, my name is Tzara. How may I help 
 
 Go on and chat with your newfound friend.
 
-3) To end chat, anything like:
+3) To end chat, type anything like:
 ```
 Bye Tzara
+```
+or 
+
+```
+Cya Tzara
 ```
 4) 
 ## Authors
