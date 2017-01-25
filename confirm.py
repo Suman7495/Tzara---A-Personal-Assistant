@@ -1,5 +1,8 @@
 """
-Gets confirmation
+Gets confirmation.
+
+Modify: 
+12: f_ok = open("path/to/file/confirmations.txt", "r")
 """
 def confirm(reply):
     """
@@ -7,9 +10,7 @@ def confirm(reply):
     If yes, success.
     Else, failure.
     """
-    f_ok = open("/media/suman/New Volume1/Artificial Intelligence"
-        "/Personal Assistant/Personal Assistant/Text_files"
-        "/confirmations.txt", "r")
+    f_ok = open("path/to/file/confirmations.txt", "r")
     confirmation_list = f_ok.read().strip().split()
     f_ok.close()
     return reply.lower() in confirmation_list
