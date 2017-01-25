@@ -1,8 +1,6 @@
 """ 
 Converses using Markov Model
 
-Modify:
-15: f = open("/path/to/file/data.txt", "w")
 """
 import nltk
 from database import database
