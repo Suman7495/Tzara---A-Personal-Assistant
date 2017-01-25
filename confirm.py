@@ -2,7 +2,7 @@
 Gets confirmation.
 
 Modify: 
-13: f_ok = open("path/to/file/confirmations.txt", "r")
+13: f_ok = open("path/to/file/confirmations.txt", "r")    #Modify
 """
 def confirm(reply):
     """
