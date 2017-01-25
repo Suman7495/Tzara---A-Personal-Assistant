@@ -1,8 +1,6 @@
 """
 Opens folders
 
-Modify:
-19: f_fldr = open("/path/to/the/file/folder.txt", "r")   
 """
 
 import os
