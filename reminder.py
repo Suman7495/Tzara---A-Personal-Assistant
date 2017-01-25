@@ -9,42 +9,46 @@ Possible amelioration:
 	
 """
 def reminder ():
+	"""
+	Initialises the reminder.
+	"""
 	speak("You want to: set a new reminder, read reminder, or delete reminder? Type 'q' to quit.")
 	speak("Input Set or Read or Delete or q.")
-	INPUT = (raw_input('\033[1m'+'Suman: '+'\033[0m')).lower()
-	#INPUT=INPUT.lower()
+	inpt = (raw_input('\033[1m'+'Username: '+'\033[0m')).lower()	#modify
 	
-	while (verify_input(INPUT)== False):
+	while verify_input(INPUT) == False:
 		speak("Input Set or Read or Delete or q.")
-		INPUT = (raw_input('\033[1m'+'Suman: '+'\033[0m')).lower()
+		inpt = raw_input('\033[1m'+'Username: '+'\033[0m').lower()	#modify
 	
-	if (INPUT=="set"):
+	if inpt == "set":
 		set_rm()		
-	elif (INPUT=='read'):
+	elif inpt == 'read':
 		read_rm()		
-	elif(INPUT=='delete'):
+	elif inpt == 'delete':
 		delete_rm()	
-	else:
-		return
+	else: return
 
 def delete_rm():
+	"""
+	Deletes reminder.
+	"""
 	speak("Here are the reminders:")
-	f=open("/media/suman/New Volume1/Artificial Intelligence/Personal Assistant/Personal Assistant/Text_files/reminder.txt", "r+")
-	data=[]
+	f = open("/path/to/the/file/reminder.txt", "r+")	#modify
+	data = []
 	for line in f:
 		print line
 		data.append(line)
 	raw_input()
 	speak('Please enter the date of the reminder in the following format: ')
 	print "dd/mm/yyyy"
-	reminder_date = raw_input('\033[1m'+'Suman: '+'\033[0m')
-	while (verify_date(reminder_date)==False):
+	reminder_date = raw_input('\033[1m'+'Username: '+'\033[0m')	#modify
+	while verify_date(reminder_date) == False:
 		speak("Sorry, invalid input. Try again")
-		reminder_date = raw_input('\033[1m'+'Suman: '+'\033[0m')
+		reminder_date = raw_input('\033[1m' + 'Username: ' + '\033[0m')	#modify
 	
-	new_data=[]
+	new_data = []
 	for line in data:
-		if (reminder_date in line):
+		if reminder_date in line:
 			continue
 		new_data.append(line)
 	f.seek(0)
@@ -54,68 +58,80 @@ def delete_rm():
 
 
 def set_rm():
+	"""
+	Sets reminder.
+	"""
 	speak("Please enter the date of the reminder in the following format: ")
 	print "dd/mm/yyyy"
-	reminder_date = raw_input('\033[1m'+'Suman: '+'\033[0m')
+	reminder_date = raw_input('\033[1m'+'Username: '+'\033[0m')	#modify
 	
-	while (verify_date(reminder_date)==False):
+	while verify_date(reminder_date) == False:
 		speak("Sorry, invalid input. Try again")
-		reminder_date = raw_input('\033[1m'+'Suman: '+'\033[0m')
+		reminder_date = raw_input('\033[1m'+'Username: '+'\033[0m') #modify
 	speak("Now set the reminder.")
-	reminder_text = raw_input('\033[1m'+'Suman: '+'\033[0m')
-	with open("/media/suman/New Volume1/Artificial Intelligence/Personal Assistant/Personal Assistant/Text_files/reminder.txt", "a") as f_reminder:
-		f_reminder.write(reminder_date+" - "+reminder_text+"\n")
+	reminder_text = raw_input('\033[1m'+'Username: '+'\033[0m')	#modify
+	with open("/path/to/the/file/reminder.txt", "a") as f_reminder:		#modify
+		f_reminder.write(reminder_date + " - " + reminder_text + "\n")
 	f_reminder.close()
 	
 	speak("Reminder successfully set.")
 
 def read_rm():
-	f=open("/media/suman/New Volume1/Artificial Intelligence/Personal Assistant/Personal Assistant/Text_files/reminder.txt", "r")
+	"""
+	Reads reminders.
+	"""
+	f = open("/path/to/the/file/reminder.txt", "r")	#modify
 	for line in f:
 		print line
 	f.close()
 	
 def verify_input(input_str):
-	acceptable_input=['set','read','delete','q']
+	"""
+	Checks validity of string input.
+	"""
+	acceptable_input = ['set','read','delete','q']
 	return (input_str in acceptable_input)	
 	
 def verify_date(input_str):
-	if (len(input_str)!=10):
+	"""
+	Checks validity of date.
+	"""
+	if len(input_str) != 10:
 		return False
-	if (input_str[2]!="/") or  (input_str[5]!="/"):
+	if input_str[2] != "/" or input_str[5] != "/":
 		return False 
-	checks=0
+	checks = 0
 	for i in xrange(1, 32):
-		if (i>=10):
-			if (str(i)==input_str[:2]) :
-				checks=1
+		if i >= 10:
+			if str(i) == input_str[:2]:
+				checks = 1
 				break
 		else:
-			if (('0'+str(i))==input_str[:2]):
-				checks=1
+			if ('0'+str(i)) == input_str[:2]:
+				checks = 1
 				break
 	
-	if (checks==0):
+	if checks==0:
 		return False
 		
 	for i in xrange(1, 13):
-		if (i>=10):
-			if (str(i)==input_str[3:5]) :
-				checks=2
+		if i>=10:
+			if str(i) == input_str[3:5]:
+				checks = 2
 				break
 		else:
-			if (('0'+str(i))==input_str[3:5]):
-				checks=2
+			if ('0'+str(i)) == input_str[3:5]:
+				checks = 2
 				break
 				
-	if (checks==1):
+	if checks == 1:
 		return False
 	
 	for i in xrange(2016, 3000):
-		if (str(i)==input_str[-4:]) :
-			checks=3
+		if str(i) == input_str[-4:]:
+			checks = 3
 			break
-	if (checks==2):
+	if checks == 2:
 		return False
 				
 	
