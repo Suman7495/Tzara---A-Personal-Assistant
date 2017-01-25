@@ -145,17 +145,17 @@ You can modify the following .txt files to personalise Tzara further:
 
 a) bye.txt - Add ways to say goodbye.
 
-b) comn_sites.txt - List of the sites you visit.
+b) comn_sites.txt - Add sites you visit.
 
-c) confirmations.txt - Add ways for to confirm.
+c) confirmations.txt - Add ways to confirm.
 
 d) corporat.txt - List of corpora from where Tzara develops her sentences. Currently from Brown Corpus
 
-e) email_id.txt - List of email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
+e) email_id.txt - Add email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
 
-f) folder.txt - List of folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Add "Documents - /home/username/Documents" to "folder.txt", and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
+f) folder.txt - Add folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Add "Documents - /home/username/Documents" to "folder.txt", and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
 
-g) greetings.txt - Ways Tzara will greet you.
+g) greetings.txt - Add ways for Tzara to greet you.
 
 ## Deployment
 
@@ -184,8 +184,4 @@ Cya Tzara
 ## Authors
 
 Suman Pal
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
