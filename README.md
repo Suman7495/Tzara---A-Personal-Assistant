@@ -1,6 +1,6 @@
 # Tzara---A-Personal-Assistant
 
-A Personal Assistant name Tzara which helps in daily tasks written in Python2.
+A Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
 
 Tasks:
 
