@@ -1,5 +1,8 @@
 """ 
 Converses using Markov Model
+
+Modify:
+15: f = open("/path/to/file/data.txt", "w")
 """
 import nltk
 from database import database
@@ -9,9 +12,7 @@ Creates database.
 Collects data from Brown Corpus in the NLTK package.
 """
 data = database()
-f = open("/media/suman/New Volume1/Artificial Intelligence/"
-    "Personal Assistant/Personal Assistant/"
-    "Text_files/data.txt", "w")
+f = open("/path/to/file/data.txt", "w")
 for word in data:
     f.write(word + " ")
 f.close()
