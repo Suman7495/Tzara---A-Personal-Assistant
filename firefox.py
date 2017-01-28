@@ -21,6 +21,8 @@ def ping():
     """
     path = os.getcwd() + "/Text_Files/ping_result.txt"
     path_os = path.replace(" ", "\ ")
+    path_os = path_os.replace("(", "\(")
+    path_os = path_os.replace(")", "\)")
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
         'then echo fail >' + path_os + ';'   
