@@ -17,7 +17,7 @@ def speak(out_string):
     path_os = path_os.replace(")", "\)")
     os.system("if ! ping -c 1 www.google.com>/dev/null;"
         "then echo fail >"+ path_os +";"   
-        "else echo success>"+ path_os + ";fi")
+        "else echo success>"+ path_os + ";fi;")
     f_ping = open(path)  
     result = f_ping.read().strip().split("\n")
     f_ping.close()
