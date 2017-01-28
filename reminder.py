@@ -8,6 +8,8 @@ Possible amelioration:
 	2. In delete function, deletes ALL reminders of a given date without asking.
 	
 """
+import os
+
 def reminder ():
 	"""
 	Initialises the reminder.
@@ -33,7 +35,8 @@ def delete_rm():
 	Deletes reminder.
 	"""
 	speak("Here are the reminders:")
-	f = open("/path/to/the/file/reminder.txt", "r+")	#modify
+	reminder_path = os.getcwd() + "/Text_Files/reminder.txt"
+	f = open(reminder_path, "r+")	
 	data = []
 	for line in f:
 		print line
@@ -70,7 +73,8 @@ def set_rm():
 		reminder_date = raw_input('\033[1m'+'Username: '+'\033[0m') #modify
 	speak("Now set the reminder.")
 	reminder_text = raw_input('\033[1m'+'Username: '+'\033[0m')	#modify
-	with open("/path/to/the/file/reminder.txt", "a") as f_reminder:		#modify
+	reminder_path = os.getcwd() + "/Text_Files/reminder.txt"
+	with open(reminder_path, "a") as f_reminder:		
 		f_reminder.write(reminder_date + " - " + reminder_text + "\n")
 	f_reminder.close()
 	
@@ -80,7 +84,8 @@ def read_rm():
 	"""
 	Reads reminders.
 	"""
-	f = open("/path/to/the/file/reminder.txt", "r")	#modify
+	reminder_path = os.getcwd() + "/Text_Files/reminder.txt"
+	f = open(reminder_path, "r")	
 	for line in f:
 		print line
 	f.close()
