@@ -170,7 +170,7 @@ g) greetings.txt - Add ways for Tzara to greet you.
 ```bash
 python /path/to/the/file/main.py
 ```
-Replace "/path/to/the/file" to the pathname to the file called "main.py". This file initialises Tzara.
+Replace "/path/to/the/file" with the pathname to the file "main.py". This file initialises Tzara.
 
 Tzara will greet you with something like: "Hi, my name is Tzara. How may I help you?"
 
