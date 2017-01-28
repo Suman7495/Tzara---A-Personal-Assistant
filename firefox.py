@@ -19,14 +19,16 @@ def ping():
     If success, saves "success" in the file mentioned below.
     Else, saves "failure".
     """
+    path = os.getcwd() + "/Text_Files/ping_result.txt"
+    path_os = path.replace(" ", "\ ")
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
-        'then echo fail >/path/to/the/file/ping_result.txt;'    #modify
-        'else echo success>/path/to/the/file/ping_result.txt;fi;clear')    #modify
+        'then echo fail >' + path_os + ';'   
+        'else echo success>'+ path_os + ';fi;clear')    
     os.system("guake -s 1")
     os.system("guake -s 2 -e exit")
 
-    f_ping = open("/path/to/the/file/ping_result.txt")    #modify
+    f_ping = open(path)    
     result = f_ping.read().strip().split("\n")
     result = ''.join(result)
     f_ping.close()
@@ -106,7 +108,8 @@ def fn_write_mail(name):
         speak("Sorry. The Internet is down currently.")
         return
     counter = 0
-    f_email = open("/path/to/the/email_id.txt", "r")	#modify
+    email_path = os.getcwd() + "/Text_Files/email_id.txt"
+    f_email = open(email_path)	
     for line in f_email:
         print line
         name_list = line.strip().split("-")
@@ -141,8 +144,9 @@ def fn_read_mail():
     if ping() == 0:
         speak("Sorry. The Internet is down currently.")
         return
-    os.system("/path/to/the/file/check_email.sh")
-    f_inbx = open("/path/to/the/file/inbox_details.txt")	#modify: Change "Username"
+    os.system("/path/to/the/file/check_email.sh")		#modify
+    inbox_path = os.getcwd() + "/Text_Files/inbox_details.txt"
+    f_inbx = open(inbox_path)	
     data = f_inbx.read()
     f_inbx.close()
     unread_mails = int(data[(data.index("<fullcount>") + 11)\
