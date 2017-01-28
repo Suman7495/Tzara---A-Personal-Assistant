@@ -51,7 +51,7 @@ def check_reminder():
     c_month = current_date[5:7]
     c_date = current_date[8:10]
     to_del = ''
-    reminder_path = os.getcwd + "/Text_Files/reminder.txt"
+    reminder_path = os.getcwd() + "/Text_Files/reminder.txt"
     f_reminder = open(reminder_path, "r+")  
     for line in f_reminder:
         r_date = line[0:2]
