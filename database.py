@@ -13,7 +13,6 @@ def database():
 	nltk_info_path_os = nltk_info_path_os.replace("(", "\(")
 	nltk_info_path_os = nltk_info_path_os.replace(")", "\)")
 	if os.path.isfile(nltk_info_path_os) == False:		#Checks if nltk_data_path.txt exists.
-		print "Wrong"
 		f_nltk = open (nltk_info_path, "w")
 		os.system('find / -iname "nltk_data" 2>/dev/null>'+ nltk_info_path_os)
 		if os.stat(nltk_info_path).st_size == 0:
