@@ -4,13 +4,15 @@ Converses using Markov Model
 """
 import nltk
 from database import database
+import os
 
 """
 Creates database.
 Collects data from Brown Corpus in the NLTK package.
 """
 data = database()
-f = open("/path/to/file/data.txt", "w")    #modify
+path = os.getcwd() + "/Text_Files/data.txt"
+f = open(path, "w")    
 for word in data:
     f.write(word + " ")
 f.close()
