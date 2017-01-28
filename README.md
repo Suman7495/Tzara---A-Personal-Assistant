@@ -99,6 +99,10 @@ sudo apt-get install xdg-utils
 
 ## Installation
 
+###Note:
+
+I have nearly automated the complete installation. Few details remain. But until I update the code, the manual installation described below is recommended.
+
 ####1) Path setup:
 
 After having downloaded all files, open EACH ONE and modify according to the instructions provided in the file. 
