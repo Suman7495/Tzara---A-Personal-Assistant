@@ -26,7 +26,7 @@ def ping():
     os.system('guake -n CUR_DIR -e "if ! ping -c 1 '
         'www.google.com &>/dev/null;'
         'then echo fail >' + path_os + ';'   
-        'else echo success>'+ path_os + ';fi;clear')    
+        'else echo success>'+ path_os + ';fi;clear"')    
     os.system("guake -s 1")
     os.system("guake -s 2 -e exit")
 
