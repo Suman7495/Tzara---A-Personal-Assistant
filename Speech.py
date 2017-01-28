@@ -9,11 +9,12 @@ def speak(out_string):
     Speaks using gTTs from the internet.
     """
     path = os.getcwd() + "/Text_Files/ping_result.txt"
+    path_os = path.replace(" ", "\ ")
     os.system("if ! ping -c 1 www.google.com>/dev/null;"
-        "then echo fail >" path+";"    #modify
-        "else echo success>" path";"  #modify
+        "then echo fail >"+ path_os +";"   
+        "else echo success>"+ path_os + ";"  
         "fi;")
-    f_ping = open(path)  #modify
+    f_ping = open(path)  
     result = f_ping.read().strip().split("\n")
     f_ping.close()
     print '\033[1m' + 'Tzara: ' + '\033[0m' + out_string
