@@ -8,6 +8,7 @@ def speak(out_string):
     """
     Speaks using gTTs from the internet.
     """
+    path = os.getcwd() + "
     os.system("if ! ping -c 1 www.google.com>/dev/null;"
         "then echo fail >/path/to/the/file/ping_result.txt;"    #modify
         "else echo success>/path/to/the/file/ping_result.txt;"  #modify
