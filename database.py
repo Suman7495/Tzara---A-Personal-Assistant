@@ -2,8 +2,11 @@
 Creates database to generate sentences.
 
 """
+import os
+
 def database():
-	f_corpora = open("/path/to/the/file/corpora.txt","r")     #modify
+	path = os.getcwd() + "/Text_Files/corpora.txt"
+	f_corpora = open(path,"r")     #modify
 	data = []
 	for name in f_corpora:
 		f = open("/path/to/the/file/nltk_data/corpora/gutenberg/" + name.strip())    #modify
