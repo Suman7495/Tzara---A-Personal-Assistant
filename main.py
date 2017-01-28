@@ -17,7 +17,8 @@ def check_last_update():
     Checks when the system was last updated.
     If the system was not updated for the last 2 days, updates system.
     """
-    f_update = open("/path/to/file/prev_update.txt", 'r+')  #modify
+    update_path = os.getcwd() + "/Text_Files/prev_update.txt"
+    f_update = open(update_path, 'r+')  
     prev_date = f_update.read().strip().split("/")
     current_date = time.strftime("%d/%m/%Y")
     date = current_date.strip().split("/")
@@ -50,7 +51,8 @@ def check_reminder():
     c_month = current_date[5:7]
     c_date = current_date[8:10]
     to_del = ''
-    f_reminder = open("/path/to/the/file/reminder.txt", "r+")   #modify
+    reminder_path = os.getcwd + "/Text_Files/reminder.txt"
+    f_reminder = open(reminder_path, "r+")  
     for line in f_reminder:
         r_date = line[0:2]
         if r_date == c_date:
@@ -76,7 +78,8 @@ def main():
     If input is "bye" (or similar), quits.
     Else passes the user input to the function tzara() stored in tzara.py
     """
-    f_greetings = open("/path/to/the/file/greetings.txt", "r")  #modify
+    greetings_path = os.getcwd() + "/Text_Files/greetings.txt"
+    f_greetings = open(greetings_path, "r")  
     greetings_list = f_greetings.read().strip().split("\n")
     f_greetings.close()
     random_greeting = random.randrange(0, len(greetings_list))
@@ -84,8 +87,9 @@ def main():
 
     check_last_update()
     check_reminder()
-
-    f_bye = open("/path/to/the/file/bye.txt", "r")  #modify
+    
+    bye_path = os.getcwd() + "/Text_Files/bye.txt"
+    f_bye = open(bye_path, "r")  
     bye_list = f_bye.read().strip().split("\n")
     f_bye.close()
     bye_list2 = [''.join(bye_list[i])+" tzara" for i in range(0, len(bye_list))]
