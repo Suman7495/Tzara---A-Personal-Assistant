@@ -14,7 +14,8 @@ def open_folder(name):
     name = name.strip()
     #os.system("find -type d -iname '*"+name +"*' -exec xdg-open ")
     counter = 0
-    f_fldr = open("/path/to/the/file/folder.txt", "r")    #modify
+    path_1 = os.getcwd() + "/Text_Files/folder.txt"
+    f_fldr = open(path_1, "r")    
     for line in f_fldr:
         name_list = line.strip().split("-")
         if name.lower() == ''.join(name_list[0:1]).lower():
