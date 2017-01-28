@@ -92,7 +92,8 @@ def tzara(string):
             reminder.reminder()
 
         elif len(filtered_sentence) > 1:
-            f_sites = open("/path/to/the/file/comn_sites.txt", "r")     #modify
+            sites_path = os.getcwd() + "/Text_Files/comn_sites.txt"
+            f_sites = open(sites_path, "r")     
             for line in f_sites:
                 name_list = line.strip().split("-")
                 #if (n.lower()==''.join(name_list[0:1]).lower()):
