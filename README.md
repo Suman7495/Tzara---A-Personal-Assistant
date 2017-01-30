@@ -40,7 +40,33 @@ An Internet connection is recommended.
 
 ## Prerequisites
 
-Environment Setup.
+### Automatic Package Installation
+
+Download Tzara and unzip the package. 
+
+If Python 2.7 is not installed, install it following the instructions [here.](https://www.python.org/downloads/)
+
+Open the Terminal and go to the directory containing the Bash script: startup.sh
+
+The command line code will be:
+```bash
+cd /path/to/the/file/startup.sh
+```
+
+Make the script executable:
+```bash
+chmod u+x startup.sh
+```
+
+Run the script:
+```bash
+./startup.sh
+```
+
+Note: If your Internet connection is slow, the NLTK package will take several hours to download and install. 
+Have patience!
+
+### Manual Package Installation
 
 1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
@@ -97,13 +123,13 @@ sudo apt-get install guake
 sudo apt-get install xdg-utils
 ```
 
-## Installation
+## Post Package Installation
 
-###Note:
+### Note:
 
 I have nearly automated the complete installation. Few details remain. But until I update the code, the manual installation described below is recommended.
 
-####1) Path setup:
+#### 1) Path setup:
 
 After having downloaded all files, open EACH ONE and modify according to the instructions provided in the file. 
 
@@ -120,7 +146,7 @@ f_reminder = open("/media/suman/New Volume1/Artificial Intelligence/Personal Ass
 
 This will ensure the Personal Assistant is customised only to you.
 
-####2) Email:
+#### 2) Email:
 
 This is particular for Gmail accounts. 
 
@@ -128,17 +154,7 @@ To send emails and read emails, you will need access to your Gmail account. But 
 
 To obtain a password for Tzara, follow [these instructions.](https://support.google.com/accounts/answer/6010255?hl=en)
 
-Then, open a plain text document in the Home Directory.
-
-Copy paste the following code. 
-```bash
-#!/bin/bash
-
-username = "your_email_here"
-password = "your_password_here"
-echo
-curl -u $username:$password --silent "https://mail.google.com/mail/feed/atom" > /path/to/the/file/inbox_details.txt
-```
+Open check_email.sh in an editor.
 
 Replace "your_email_here" with your email-id. E.g. john@gmail.com
 
@@ -146,9 +162,15 @@ Replace "your_password_here"  with the new password respectively. Note: the pass
 
 Replace "/path/to/the/file/" with the pathname to the file "inbox_detail.txt"
 
-Rename the document to: "check_email.sh"
+Open the Terminal. Go to the directory containing the script: check_email.sh
 
-####3) Setting up .txt files:
+Make the script executable:
+
+```bash
+chmod u+x check_email.sh
+```
+
+#### 3) Setting up .txt files:
 
 You can modify the following .txt files to personalise Tzara further:
 
