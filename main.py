@@ -95,7 +95,7 @@ def main():
     bye_list2 = [''.join(bye_list[i])+" tzara" for i in range(0, len(bye_list))]
     bye_list3 = [''.join(bye_list[i])+" then" for i in range(0, len(bye_list))]
     while 1:
-        input_string = raw_input('\033[1m'+'Suman: '+'\033[0m')
+        input_string = raw_input('\033[1m'+'Username: '+'\033[0m')  #modify
         if input_string:
             input_string = input_string.lower()
             if input_string in bye_list or \
