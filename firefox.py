@@ -44,13 +44,15 @@ def fn_search(word):
     """
     Calls ping().
     If success:
-        Searches for the given word.
+        Searches for the given sentence.
     """
+    
     if ping() == 0:
         return
-    speak('Would you like me to search for the word ' + word + '?')
+    speak('Would you like me to search for "' + word + '"?')
     reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')    #modify: Change "Username"
     if confirm(reply) == 1:
+        word = word.replace(" ", "+")
         search_link = "www.google.co.in/#q=" + word
         speak('Cool. Here are the results.')
         os.system('guake -n CUR_DIR -e "firefox "' + search_link +
