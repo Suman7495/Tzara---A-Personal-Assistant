@@ -202,7 +202,7 @@ Tzara will greet you with something like: ```Hi, my name is Tzara. How may I hel
 
 Go on and chat with your newfound friend.
 
-3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: ```Hey Tzara, could you please search for cat.``` or ```Hi, could you please google cat.``` or simply "google cat".
+3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: ```Hey Tzara, could you please search for cat.``` or ```Hi, could you please google cat.``` or simply ```google cat```.
 
 4) To end chat, type anything like:
 ```
