@@ -46,7 +46,7 @@ Download Tzara and unzip the package.
 
 If Python 2.7 is not installed, install it following the instructions [here.](https://www.python.org/downloads/)
 
-Open the Terminal and go to the directory containing the Bash script: ```startup.sh```
+Open the Terminal and go to the directory containing the Bash script ```startup.sh```
 
 The command line code will be:
 ```bash
@@ -162,7 +162,7 @@ Replace ```"your_password_here"```  with the new password respectively. Note: th
 
 Replace ```"/path/to/the/file/"``` with the pathname to the file ```"inbox_detail.txt"```
 
-Open the Terminal. Go to the directory containing the script: ```check_email.sh```
+Open the Terminal. Go to the directory containing the script ```check_email.sh```
 
 Make the script executable:
 
