@@ -41,7 +41,10 @@ def tzara(string):
     stop_words = set(stopwords.words('english'))
 
     #Creating space for a list of sentences without stop_words.
-    filtered_sentence = [w for w in word_list if not w in stop_words]
+    if "search" not in word_list and "google" not in word_list:
+        filtered_sentence = [w for w in word_list if not w in stop_words]
+    else:
+		filtered_sentence = [w for w in word_list]
    
     if 'open' in filtered_sentence:
         #OPEN WEBSITE
@@ -152,24 +155,15 @@ def tzara(string):
             speak("If you want me to search for a word,"
                 "say 'google <word>'")
 
-    elif 'search' in filtered_sentence:
-        pos = filtered_sentence.index('search') + 1
-        search_string = ''.join(filtered_sentence[pos:])
-        speak("Enter the word you would like me to search.")
-
-        #speak("Would you like me to search for the word"
-            #""+search_string+" on Google?")
-        reply = raw_input('\033[1m' + 'Username: ' + '\033[0m')     #modify
-        if confirm(reply) == 1:
+   elif 'search' in filtered_sentence:
+        if filtered_sentence[-1] == "search":
+            speak("Enter the word you would like me to search.")
+            search_string = raw_input('\033[1m' + 'Username: ' + '\033[0m')     #modify
             firefox.fn_search(search_string)
-        #else:
-        #    speak("Would you like me to search in the file system?")
-        #    reply=raw_input('\033[1m'+'Suman: '+'\033[0m')
-        #    if (confirm(reply)==1):
-        #        os.system("find / "+ search_string)
-        else:
-            speak("I think you want me to search for something,"
-                "but I'm not sure where.")
+            return
+        pos = filtered_sentence.index('search') + 1
+        search_string = " ".join(filtered_sentence[pos:])
+        firefox.fn_search(search_string)
 
     elif 'reminder' in filtered_sentence:
         speak("Opening reminder")
