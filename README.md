@@ -1,6 +1,6 @@
 # Tzara---A-Personal-Assistant
 
-A ```highly``` customisable Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
+A highly customisable Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
 
 ####Tasks:
 
@@ -46,7 +46,7 @@ Download Tzara and unzip the package.
 
 If Python 2.7 is not installed, install it following the instructions [here.](https://www.python.org/downloads/)
 
-Open the Terminal and go to the directory containing the Bash script: startup.sh
+Open the Terminal and go to the directory containing the Bash script: ```startup.sh```
 
 The command line code will be:
 ```bash
@@ -137,7 +137,7 @@ For example, you may find:
 ```python
 f_reminder = open("/path/to/the/file/reminder.txt", "r+")
 ```
-Replace "/path/to/the/file" with the actual pathname to the file called "reminder.txt". 
+Replace ```"/path/to/the/file"``` with the actual pathname to the file called ```"reminder.txt"```. 
 
 Thus, in my system, this particular pathname was:
 ```python
@@ -154,15 +154,15 @@ To send emails and read emails, you will need access to your Gmail account. But 
 
 To obtain a password for Tzara, follow [these instructions.](https://support.google.com/accounts/answer/6010255?hl=en)
 
-Open check_email.sh in an editor.
+Open ```check_email.sh``` in an editor.
 
-Replace "your_email_here" with your email-id. E.g. john@gmail.com
+Replace ```"your_email_here"``` with your email-id. E.g. john@gmail.com
 
-Replace "your_password_here"  with the new password respectively. Note: the password is NOT your general email account password. It is specific to this application.
+Replace ```"your_password_here"```  with the new password respectively. Note: the password is NOT your general email account password. It is specific to this application.
 
-Replace "/path/to/the/file/" with the pathname to the file "inbox_detail.txt"
+Replace ```"/path/to/the/file/"``` with the pathname to the file ```"inbox_detail.txt"```
 
-Open the Terminal. Go to the directory containing the script: check_email.sh
+Open the Terminal. Go to the directory containing the script: ```check_email.sh```
 
 Make the script executable:
 
@@ -174,19 +174,19 @@ chmod u+x check_email.sh
 
 You can modify the following .txt files to personalise Tzara further:
 
-a) bye.txt - Add ways to say goodbye.
+a) ```bye.txt``` - Add ways to say goodbye.
 
-b) comn_sites.txt - Add sites you visit.
+b) ```comn_sites.txt``` - Add sites you visit.
 
-c) confirmations.txt - Add ways to confirm.
+c) ```confirmations.txt``` - Add ways to confirm.
 
-d) corporat.txt - List of corpora from where Tzara develops her sentences. Currently from Brown Corpus
+d) ```corporat.txt``` - List of corpora from where Tzara develops her sentences. Currently from Brown Corpus
 
-e) email_id.txt - Add email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
+e) ```email_id.txt``` - Add email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
 
-f) folder.txt - Add folder names and paths you frequently use. E.g. Suppose you go to /home/username/Documents often. Add "Documents - /home/username/Documents" to "folder.txt", and then you can simply tell Tzara: "Open folder documents", and she will open the correct folder.
+f) ```folder.txt``` - Add folder names and paths you frequently use. E.g. Suppose you go to ```/home/username/Documents``` often. Add ```"Documents - /home/username/Documents"``` to ```"folder.txt"```, and then you can simply tell Tzara: ```"Open folder documents"```, and she will open the correct folder.
 
-g) greetings.txt - Add ways for Tzara to greet you.
+g) ```greetings.txt``` - Add ways for Tzara to greet you.
 
 ## Deployment
 
@@ -196,13 +196,13 @@ g) greetings.txt - Add ways for Tzara to greet you.
 ```bash
 python /path/to/the/file/main.py
 ```
-Replace "/path/to/the/file" with the pathname to the file "main.py". This file initialises Tzara.
+Replace ```"/path/to/the/file"``` with the pathname to the file ```"main.py"```. This file initialises Tzara.
 
-Tzara will greet you with something like: "Hi, my name is Tzara. How may I help you?"
+Tzara will greet you with something like: ```"Hi, my name is Tzara. How may I help you?"```
 
 Go on and chat with your newfound friend.
 
-3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: "Hey Tzara, could you please search for cat." or "Hi, could you please google cat." or simply "google cat".
+3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: ```"Hey Tzara, could you please search for cat."``` or ```"Hi, could you please google cat."``` or simply "google cat".
 
 4) To end chat, type anything like:
 ```
