@@ -156,11 +156,11 @@ To obtain a password for Tzara, follow [these instructions.](https://support.goo
 
 Open ```check_email.sh``` in an editor.
 
-Replace ```"your_email_here"``` with your email-id. E.g. john@gmail.com
+Replace ```your_email_herr``` with your email-id. E.g. john@gmail.com
 
-Replace ```"your_password_here"```  with the new password respectively. Note: the password is NOT your general email account password. It is specific to this application.
+Replace ```your_password_here```  with the new password respectively. Note: the password is NOT your general email account password. It is specific to this application.
 
-Replace ```"/path/to/the/file/"``` with the pathname to the file ```"inbox_detail.txt"```
+Replace ```/path/to/the/file/``` with the pathname to the file ```inbox_detail.txt```
 
 Open the Terminal. Go to the directory containing the script ```check_email.sh```
 
@@ -184,7 +184,7 @@ d) ```corporat.txt``` - List of corpora from where Tzara develops her sentences.
 
 e) ```email_id.txt``` - Add email-ids. E.g. john@gmail.com - Simply say: "Mail John", and Tzara will mail john@gmail.com
 
-f) ```folder.txt``` - Add folder names and paths you frequently use. E.g. Suppose you go to ```/home/username/Documents``` often. Add ```"Documents - /home/username/Documents"``` to ```"folder.txt"```, and then you can simply tell Tzara: ```"Open folder documents"```, and she will open the correct folder.
+f) ```folder.txt``` - Add folder names and paths you frequently use. E.g. Suppose you go to ```/home/username/Documents``` often. Add ```Documents - /home/username/Documents``` to ```folder.txt```, and then you can simply tell Tzara: ```Open folder documents```, and she will open the correct folder.
 
 g) ```greetings.txt``` - Add ways for Tzara to greet you.
 
@@ -196,13 +196,13 @@ g) ```greetings.txt``` - Add ways for Tzara to greet you.
 ```bash
 python /path/to/the/file/main.py
 ```
-Replace ```"/path/to/the/file"``` with the pathname to the file ```"main.py"```. This file initialises Tzara.
+Replace ```/path/to/the/file``` with the pathname to the file ```main.py```. This file initialises Tzara.
 
-Tzara will greet you with something like: ```"Hi, my name is Tzara. How may I help you?"```
+Tzara will greet you with something like: ```Hi, my name is Tzara. How may I help you?```
 
 Go on and chat with your newfound friend.
 
-3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: ```"Hey Tzara, could you please search for cat."``` or ```"Hi, could you please google cat."``` or simply "google cat".
+3) To give commands, simply chat. For example, if you want Tzara to search for the word "cat" on the Internet, simply type something like: ```Hey Tzara, could you please search for cat.``` or ```Hi, could you please google cat.``` or simply "google cat".
 
 4) To end chat, type anything like:
 ```
