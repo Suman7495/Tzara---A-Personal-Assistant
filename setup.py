@@ -5,7 +5,8 @@ import os
 class MyInstall(install):
     def run(self):
         install.run(self)
-        os.system("chmod u+x startup.sh")
+        os.system("chmod u+x /usr/local/bin/startup.sh")
+        os.system("cd /usr/local/bin")
         os.system("./startup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
@@ -16,6 +17,6 @@ setup(name='Tzara---A-Personal-Assistant',
       author_email='suman7495@gmail.com',
       license='MIT',
       packages=['tzara'],
-      scripts=['bin/startup.sh']
+      scripts=['bin/startup.sh'],
       cmdclass={'install': MyInstall},
      )
