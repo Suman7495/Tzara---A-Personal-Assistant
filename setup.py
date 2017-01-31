@@ -7,4 +7,14 @@ setup(name='tzara',
       author='Suman Pal',
       author_email='suman7495@gmail.com',
       license='MIT',
-      packages=['tzara'],)
+      packages=['tzara'],
+      install_requires=[
+            'gtts',
+            'mpg123',
+            'nltk',
+            'firefox',
+            'audacious',
+            'wmctrl',
+            'guake',
+            'xdg-utils',]
+     )
