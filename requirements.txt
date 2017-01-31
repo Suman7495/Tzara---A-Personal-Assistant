@@ -1,0 +1,9 @@
+mpg123==1.16.0
+nltk==3.0.0
+gtts==1.1.6
+firefox==51.0.1
+audacious==3.4.3
+xdotool==3.20140217.1
+wmctrol==1.07
+guake==0.4.4
+xdg-utils==1.1.0~rc1-2ubuntu7-1linuxm all 
