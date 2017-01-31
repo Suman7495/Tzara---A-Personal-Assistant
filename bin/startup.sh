@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash/env
 
 echo "Initialising setup..."
 sudo apt-get update 
