@@ -10,9 +10,9 @@ import os
 Creates database.
 Collects data from Brown Corpus in the NLTK package.
 """
+
 data = database()
-path = os.getcwd() + "/Text_Files/data.txt"
-f = open(path, "w")    
+f = open(os.getcwd() + "/Text_Files/data.txt", "w")    
 for word in data:
     f.write(word + " ")
 f.close()
