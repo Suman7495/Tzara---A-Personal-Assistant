@@ -5,9 +5,9 @@ import os
 class MyInstall(install):
     def run(self):
         install.run(self)
-        os.system("chmod u+x /usr/local/bin/startup.sh")
-        os.system("cd /usr/local/bin")
-        os.system("./startup.sh")
+        path = os.getcwd().replace(" ", "\ ").replace("(","\(").replace(")","\)") + "/bin/"
+        os.system("chmod +x "+path+"startup.sh")
+        os.system("sh "+path+"startup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
       version='0.1',
