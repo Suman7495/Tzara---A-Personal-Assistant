@@ -3,6 +3,7 @@ Gets confirmation.
 
 """
 import os
+
 def confirm(reply):
     """
     Checks if reply is in confirmation list.
