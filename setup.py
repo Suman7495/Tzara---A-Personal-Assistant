@@ -1,4 +1,12 @@
 from setuptools import setup
+from setuptools.command.install import install
+import os
+
+class MyInstall(install):
+    def run(self):
+        install.run(self)
+        os.system("chmod u+x startup.sh")
+        os.system("./startup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
       version='0.1',
@@ -9,15 +17,5 @@ setup(name='Tzara---A-Personal-Assistant',
       license='MIT',
       packages=['tzara'],
       scripts=['bin/startup.sh']
-      install_requires=[
-            'gtts',
-            'mpg123',
-            'nltk',
-            'firefox',
-            'audacious',
-            'wmctrl',
-            'guake',
-            'xdg-utils',
-      ],
-      include_package_data=True,
+      cmdclass={'install': MyInstall},
      )
