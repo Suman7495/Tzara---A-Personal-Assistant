@@ -8,6 +8,7 @@ setup(name='Tzara---A-Personal-Assistant',
       author_email='suman7495@gmail.com',
       license='MIT',
       packages=['tzara'],
+      scripts=['bin/startup.sh']
       install_requires=[
             'gtts',
             'mpg123',
