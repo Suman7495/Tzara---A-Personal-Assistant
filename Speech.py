@@ -8,9 +8,6 @@ def speak(out_string):
     """
     Speaks using gTTs from the internet.
     """
-    if out_string == "No data":
-		speak("Please install NLTK.")
-		return
     path = os.getcwd() + "/Text_Files/ping_result.txt"
     path_os = path.replace(" ", "\ ")
     path_os = path_os.replace("(", "\(")
