@@ -77,7 +77,7 @@ sudo apt-get install python-pip
 ``` 
 You could also install Pip following [these instructions.](https://pip.pypa.io/en/stable/installing/)
 
-3) gTTS
+3) gtts
 ```bash
 sudo pip install gTTS
 ```
