@@ -10,8 +10,7 @@ def confirm(reply):
     If yes, success.
     Else, failure.
     """
-    path = os.getcwd() + "/Text_Files/confirmations.txt"
-    f_ok = open(path, "r")    
+    f_ok = open(os.getcwd() + "/Text_Files/confirmations.txt", "r")    
     confirmation_list = f_ok.read().strip().split()
     f_ok.close()
     return reply.lower() in confirmation_list
