@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Initialising setup..."
 sudo apt-get update 
 sudo apt-get upgrade 
