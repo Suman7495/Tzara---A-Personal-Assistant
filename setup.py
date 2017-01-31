@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='tzara',
+setup(name='Tzara---A-Personal-Assistant',
       version='0.1',
       description='A Virtual Personal Assistant',
       url='https://github.com/Suman7495/Tzara---A-Personal-Assistant',
