@@ -16,5 +16,7 @@ setup(name='tzara',
             'audacious',
             'wmctrl',
             'guake',
-            'xdg-utils',]
+            'xdg-utils',
+      ],
+      include_package_data=True,
      )
