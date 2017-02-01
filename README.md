@@ -40,7 +40,7 @@ An Internet connection is recommended.
 
 ## Prerequisites
 
-### Automatic Package Installation (Method 1)
+### Automatic Package Installation - Recommended (Method 1)
 
 Open the terminal and input:
 ```bash
@@ -50,7 +50,7 @@ sudo pip install TzaraIPA
 ####Note: If your Internet connection is slow, the NLTK package will take several hours to download and install. 
 Have patience!
 
-### Manual Package Installation
+### Manual Package Installation (Method 2)
 
 1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
