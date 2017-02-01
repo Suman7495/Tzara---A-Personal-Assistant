@@ -155,7 +155,7 @@ def tzara(string):
             speak("If you want me to search for a word,"
                 "say 'google <word>'")
 
-   elif 'search' in filtered_sentence:
+    elif 'search' in filtered_sentence:
         if filtered_sentence[-1] == "search":
             speak("Enter the word you would like me to search.")
             search_string = raw_input('\033[1m' + 'Username: ' + '\033[0m')     #modify
