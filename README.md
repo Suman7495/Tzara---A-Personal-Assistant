@@ -40,23 +40,12 @@ An Internet connection is recommended.
 
 ## Prerequisites
 
-### Automatic Package Installation
+### Automatic Package Installation (Method 1)
 
-If Python 2.7 is not installed, install it following the instructions [here.](https://www.python.org/downloads/)
-
-Download Tzara and unzip the package. Open the terminal and go to the folder called ```Tzara---A-Personal-Assistant-master```
-
-The command line would be:
+Open the terminal and input:
+```bash
+sudo pip install TzaraIPA
 ```
-cd /path/to/the/folder/Tzara---A-Personal-Assistant-master/
-```
-Then, run:
-```
-sudo python setup.py install
-```
-When you are prompted for your password, enter it.
-
-Then the installation will begin.
 
 ####Note: If your Internet connection is slow, the NLTK package will take several hours to download and install. 
 Have patience!
