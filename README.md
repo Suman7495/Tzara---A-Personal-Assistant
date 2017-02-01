@@ -34,9 +34,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Requirements
 
-Debian or Ubuntu based system.
+1) Debian or Ubuntu based system.
 
-An Internet connection is recommended.
+2) An Internet connection.
+
+3) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
+
+4) Pip
+```bash
+sudo apt-get update
+sudo apt-get install python-pip
+``` 
+You could also install Pip following [these instructions.](https://pip.pypa.io/en/stable/installing/)
+
 
 ## Prerequisites
 
@@ -52,57 +62,48 @@ Have patience!
 
 ### Manual Package Installation (Method 2)
 
-1) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
-
-2) Pip
-```bash
-sudo apt-get update
-sudo apt-get install python-pip
-``` 
-You could also install Pip following [these instructions.](https://pip.pypa.io/en/stable/installing/)
-
-3) gtts
+1) gtts
 ```bash
 sudo pip install gTTS
 ```
 
-4) mpg123
+2) mpg123
 ```bash
 sudo apt-get install mpg123
 ```
 
-5) NLTK package
+3) NLTK package
 ```bash
 sudo pip install -U nltk
 ```
 Or follow [these instructions.](http://www.nltk.org/install.html)
 
-6) Firefox
+4) Firefox
 ```bash
 sudo apt-get install firefox
 ```
 
-7) Audacious music Player
+5) Audacious music Player
 ```bash
 sudo apt-get install audacious
 ```
 
-8) xdotool
+6) xdotool
 ```bash
 sudo apt-get install xdotool
 ```
 
-9) wmctrl
+7) wmctrl
 ```bash
 sudo apt-get install wmctrl
 ```
 
-10) Guake dropdown terminal
+8) Guake dropdown terminal
 ```bash
 sudo apt-get install guake
 ```
 
-11) xdg-utils
+9) xdg-utils
 ```bash
 sudo apt-get install xdg-utils
 ```
