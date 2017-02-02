@@ -34,7 +34,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## IMPORTANT NOTE: CURRENTLY UNDER MAINTENANCE, PLEASE RECHECK IN 2 DAYS!!! SORRY FOR THE INCONVENIENCE!
 
-## Requirements
+## Prerequisites
 
 1) Debian or Ubuntu based system.
 
@@ -50,7 +50,7 @@ sudo apt-get install python-pip
 You could also install Pip following [these instructions.](https://pip.pypa.io/en/stable/installing/)
 
 
-## Prerequisites
+## Installation
 
 ### Automatic Package Installation - Recommended (Method 1)
 
