@@ -112,7 +112,7 @@ sudo apt-get install xdg-utils
 
 ### Note:
 
-I have nearly automated the complete installation. Few details remain. But until I update the code, the manual installation described below is recommended.
+I have nearly automated the complete installation. Few details remain. But until I update the code, the manual post package installation described below is recommended.
 
 #### 1) Path setup:
 
