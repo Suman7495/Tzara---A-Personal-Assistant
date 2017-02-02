@@ -38,11 +38,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 1) Debian or Ubuntu based system.
 
-2) An Internet connection.
+2) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
 
-3) Python 2.7 - Installation instructions can be found [here.](https://www.python.org/downloads/)
-
-4) Pip
+3) Pip
 ```bash
 sudo apt-get update
 sudo apt-get install python-pip
