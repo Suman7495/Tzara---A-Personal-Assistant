@@ -6,9 +6,6 @@ class MyInstall(install):
     def run(self):
         install.run(self)
         path = os.getcwd().replace(" ", "\ ").replace("(","\(").replace(")","\)") + "/bin/"
-        os.system("echo 'Setting up Tzara.desktop'")
-        os.system("chmod +x "+path+"desktopsetup.sh")
-        os.system("sh "+path+"desktopsetup.sh")
         os.system("chmod +x "+path+"startup.sh")
         os.system("sh "+path+"startup.sh")
         
@@ -24,6 +21,6 @@ setup(name='Tzara---A-Personal-Assistant',
       classifiers=['Development Status :: 4 - Beta',
       'Programming Language :: Python :: 2.7',            
       ],
-      scripts=['bin/desktopsetup.sh', 'bin/startup.sh'],
+      scripts=['bin/startup.sh'],
       cmdclass={'install': MyInstall},
      )
