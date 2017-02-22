@@ -23,6 +23,6 @@ setup(name='Tzara---A-Personal-Assistant',
       classifiers=['Development Status :: 4 - Beta',
       'Programming Language :: Python :: 2.7',            
       ],
-      console_scripts=['bin/startup.sh', 'bin/desktopsetup.sh'],
+      scripts=['bin/startup.sh', 'bin/desktopsetup.sh'],
       cmdclass={'install': MyInstall},
      )
