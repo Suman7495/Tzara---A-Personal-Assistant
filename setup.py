@@ -13,7 +13,7 @@ class MyInstall(install):
         os.system("bash "+path+"desktopsetup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
-      version='1.0.1',
+      version='1.0.2',
       description='A Virtual Personal Assistant',
       url='https://github.com/Suman7495/Tzara---A-Personal-Assistant',
       author='Suman Pal',
@@ -23,6 +23,6 @@ setup(name='Tzara---A-Personal-Assistant',
       classifiers=['Development Status :: 4 - Beta',
       'Programming Language :: Python :: 2.7',            
       ],
-      console_scripts=['bin/startup.sh'],
+      console_scripts=['bin/startup.sh', 'bin/desktopsetup.sh'],
       cmdclass={'install': MyInstall},
      )
