@@ -8,7 +8,7 @@ class MyInstall(install):
         path = os.getcwd().replace(" ", "\ ").replace("(","\(").replace(")","\)") + "/bin/"
         os.system("chmod +x "+path+"startup.sh")
         os.system("sh "+path+"startup.sh")
-        os.system(echo "Setting up Tzara.desktop")
+        os.system("echo 'Setting up Tzara.desktop'")
         os.system("chmod +x "+path+"desktopsetup.sh")
         os.system("bash "+path+"desktopsetup.sh")
 
