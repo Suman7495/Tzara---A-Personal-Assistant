@@ -8,6 +8,8 @@ class MyInstall(install):
         path = os.getcwd().replace(" ", "\ ").replace("(","\(").replace(")","\)") + "/bin/"
         os.system("chmod +x "+path+"startup.sh")
         os.system("sh "+path+"startup.sh")
+        os.system("chmod +x"+path+"desktopsetup.sh")
+        os.system("sh "+path+"desktopsetup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
       version='0.4',
