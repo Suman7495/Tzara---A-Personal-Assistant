@@ -9,7 +9,7 @@ class MyInstall(install):
         os.system("chmod +x "+path+"startup.sh")
         os.system("sh "+path+"startup.sh")
         os.system("chmod +x "+path+"desktopsetup.sh")
-        os.system("sh "+path+"desktopsetup.sh")
+        os.system("bash "+path+"desktopsetup.sh")
 
 setup(name='Tzara---A-Personal-Assistant',
       version='0.4',
