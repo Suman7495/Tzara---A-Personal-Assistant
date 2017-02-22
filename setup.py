@@ -8,13 +8,13 @@ class MyInstall(install):
         path = os.getcwd().replace(" ", "\ ").replace("(","\(").replace(")","\)") + "/bin/"
         os.system("echo 'Setting up Tzara.desktop'")
         os.system("chmod +x "+path+"desktopsetup.sh")
-        os.system("bash "+path+"desktopsetup.sh")
+        os.system("sh "+path+"desktopsetup.sh")
         os.system("chmod +x "+path+"startup.sh")
         os.system("sh "+path+"startup.sh")
         
 
 setup(name='Tzara---A-Personal-Assistant',
-      version='1.0.5',
+      version='1.0.6',
       description='A Virtual Personal Assistant',
       url='https://github.com/Suman7495/Tzara---A-Personal-Assistant',
       author='Suman Pal',
