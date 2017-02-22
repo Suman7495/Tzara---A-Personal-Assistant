@@ -11,7 +11,7 @@ class MyInstall(install):
         
 
 setup(name='Tzara---A-Personal-Assistant',
-      version='1.0.8',
+      version='1.0.9',
       description='A Virtual Personal Assistant',
       url='https://github.com/Suman7495/Tzara---A-Personal-Assistant',
       author='Suman Pal',
