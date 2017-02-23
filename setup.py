@@ -24,3 +24,4 @@ setup(name='Tzara---A-Personal-Assistant',
       scripts=['bin/startup.sh'],
       cmdclass={'install': MyInstall},
      )
+
