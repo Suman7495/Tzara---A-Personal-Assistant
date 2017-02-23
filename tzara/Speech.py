@@ -23,5 +23,3 @@ def speak(out_string):
         tts = gTTS(text = out_string, lang = 'en')
         tts.save("hello.mp3")
         os.system("mpg321 -q hello.mp3")
-
-
