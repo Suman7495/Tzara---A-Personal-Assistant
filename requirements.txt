@@ -6,4 +6,4 @@ audacious==3.4.3
 xdotool==3.20140217.1
 wmctrol==1.07
 guake==0.4.4
-xdg-utils==1.1.0~rc1-2ubuntu7-1linuxm all 
+xdg-utils==1.1.0~rc1-2ubuntu7-1linuxm all
