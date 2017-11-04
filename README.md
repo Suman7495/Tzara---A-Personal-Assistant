@@ -2,7 +2,7 @@
 
 A highly customisable Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
 
-##Tasks:
+## Tasks:
 
 1. Send emails
 
