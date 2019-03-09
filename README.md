@@ -32,8 +32,6 @@ A highly customisable Personal Assistant name Tzara which helps in daily tasks w
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## IMPORTANT NOTE: Currently under maintenance!
-
 ## Prerequisites
 
 1) Debian or Ubuntu based system.
