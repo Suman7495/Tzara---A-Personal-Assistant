@@ -1,4 +1,4 @@
-# Tzara---A-Personal-Assistant
+# Tzara - An Intellgent Personal Assistant
 
 A highly customisable Personal Assistant name Tzara which helps in daily tasks written in Python 2.7.
 
